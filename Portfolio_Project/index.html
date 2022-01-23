@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Kalb's Portfolio</title>
+    <link rel="stylesheet" type ="text/css" href="css/portfolio.css">
+</head>
+<body class="Background">
+    <!--Start Nav-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="About">About</a>
+        <a href="Contact">Contact</a>
+    </div>
+<!-- end Nav-->
+
+    <!--Spacer for heading-->
+    <br>
+    <br>
+
+    <!--video-->
+    <div id="Home">
+        <video autoplay muted loop id ="Background_Video">
+            <source src="background_video/background.mp4" type="video/mp4">
+            Your Browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- video text-->
+    <div class= "Video_Text">
+        <h1 class="white-text">David Kalb's Portfolio</h1>
+        <strong>
+            <p class= "center" id="Home_p">
+                <q>We are reaching the stage where the problems we must solve 
+                    <br>are going to become insoluble without computers. 
+                    <br>I do not fear computers, I fear the lack of them.
+                </q>
+                <br> -Isaac Asimov
+                <br>
+                <br> My name is David Kalb. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                <br>
+                <br> Thank you for stopping by and enjoy! 
+            </p>
+        </strong>
+    </div>
+
+    <!--about section-->
+    <div class="Row" id="About">
+        <!-- left column-->
+        <div class="Column_2">
+            <img src="./images/about.jpg" alt="coffee cup and labtop">
+        </div>
+        <!--right column--> 
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                Can frequently be found hiking, reading, playing chess in the park, 
+                    <br>or adding to an increasingly concerning collection of records. 
+                    <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>
+                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+    
+    <!--GitHub section-->
+    <div class="Row" id="GitHub">
+        <!--Left column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my coding projects on my GitHub profile here:
+                <br>
+                <p class="center"><a href="https://github.com/djkalb" target="_blank">David Kalb's Github</a></p>
+            </p>
+        </div>
+        <!--Right column-->
+        <div class="Column_2">
+
+            <a href="https://github.com/djkalb" target="_blank">
+                <img src="images/GitHub.png" alt="GitHub Logo"></a>
+        </div>
+    </div>
+
+    <!--Contact section-->
+    <div class="Row" id="Contact">
+        <!--Contact image, left column-->
+        <div class="Column_2 Column_tall">
+            <img src="./images/contact.jpg" alt="Contact_Image">
+        </div>
+        <!--Contact form, right column-->
+        <div class="Column_1 Column_tall">
+            <h1>Contact</h1>
+            
+            <form action="https://formspree.io/f/mbjwdqoa" method="POST"> 
+                <label>Name:</label>
+                    <input type="text" placeholder="Please enter your name here">
+                <label>Email:</label>
+                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <label>Message:</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!--Footer section-->
+    <footer>
+       
+            <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+            <br>
+        
+    </footer>
+    
+</body>
+</html>
