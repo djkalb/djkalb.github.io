@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Kalb's Portfolio</title>
+    <link rel="shortcut icon" type="img/jpg" href="Portfolio_Project/images/"><!--need to fix link with photo-->
     <link rel="stylesheet" type ="text/css" href="./Portfolio_Project/css/portfolio.css">
 </head>
 <body class="Background">
@@ -12,7 +13,9 @@
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
         <a href="#About">About</a>
-        <a href="#Contact">Contact</a>
+        <a href="#Github">Github</a>
+        
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact" >Contact</a>
     </div>
 <!-- end Nav-->
 
@@ -45,6 +48,52 @@
             </p>
         </strong>
     </div>
+    <!--slideshow-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Portfolio_Project/images/thumbsup.png" alt="photo"><!--need photo i guess-->
+                    <div class="text">I'm available to assist you on your next project!</div> 
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Portfolio_Project/images/HTML_CSS_and_JavaScript.jpeg" alt="photo"><!--need photo i guess-->
+                    <div class="text">I am a full-stack software developer, <br>
+                    trained in:<br> HTML, CSS, Javascript</div> 
+
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Portfolio_Project/images/python.png" alt="photo"><!--need photo i guess-->
+                    <div class="text">the popular programming language python!</div> 
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Portfolio_Project/images/csharp.png" alt="photo"><!--need photo i guess-->
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div> 
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Portfolio_Project/images/SQL_and_Database.jpg" alt="photo"><!--need photo i guess-->
+                    <div class="text">back end development, databases and SQL.</div> 
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Portfolio_Project/images/contact.jpg" alt="photo"><!--need photo i guess-->
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a> </div> 
+                </div>
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!--slideshow dots-->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
 
     <!--about section-->
     <div class="Row" id="About">
@@ -61,13 +110,13 @@
                     <br>
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
                     <br>
-                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br>I am a full-stack developer and would love to work with you on your project.  
             </p>
         </div>
     </div>
     
     <!--GitHub section-->
-    <div class="Row" id="GitHub">
+    <div class="Row" id="Github">
         <!--Left column-->
         <div class="Column_1">
             <h1>GitHub</h1>
@@ -86,23 +135,21 @@
     </div>
 
     <!--Contact section-->
-    <div class="Row" id="Contact">
-        <!--Contact image, left column-->
-        <div class="Column_2 Column_tall">
-            <img src="./Portfolio_Project/images/contact.jpg" alt="Contact_Image">
-        </div>
-        <!--Contact form, right column-->
-        <div class="Column_1 Column_tall">
-            <h1>Contact</h1>
+    <div  id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">Contact</button>
+        <div class="form-popup" id="myForm">
             
-            <form action="https://formspree.io/f/mbjwdqoa" method="POST"> 
+            
+            <form action="https://formspree.io/f/mbjwdqoa" method="POST" class="form-container"> 
+                <h1>Contact</h1>
                 <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
+                    <input type="text" placeholder="Please enter your name here" required>
                 <label>Email:</label>
-                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
                 <label>Message:</label>
                     <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="SUBMIT">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </form>
         </div>
     </div>
@@ -114,6 +161,7 @@
             <br>
         
     </footer>
+    <script src="Portfolio_Project/JS/portfolio.js"></script>
     
 </body>
 </html>
