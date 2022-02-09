@@ -96,7 +96,7 @@ img {
     filter: grayscale(75%); 
     border-radius: 8px; 
     max-width: 100%; 
-    width: 563px;
+    width: auto;
     height: 340px; 
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-top: .7vw;
